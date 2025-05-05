@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import Header from '@/components/Header';
 // Settings page no longer uses Navbar
 import Toast from '@/components/Toast';
@@ -18,11 +18,11 @@ export default function Settings() {
   });
 
   // Show toast notification
-  const showToast = (message: string, type: 'success' | 'error' | 'info' = 'success') => {
+  const showToast = useCallback((message: string, type: 'success' | 'error' | 'info' = 'success') => {
     setToast({ show: true, message, type });
     // Auto-hide toast after 3 seconds
     setTimeout(() => setToast({ show: false, message: '', type: 'success' }), 3000);
-  };
+  }, []);
 
   // Apply settings to document and localStorage
   const applySettings = useMemo(() => ({

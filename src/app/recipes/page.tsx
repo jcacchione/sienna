@@ -28,6 +28,7 @@ export default function Recipes() {
   // Toggle favorite status for a recipe
   const toggleFavorite = (id: string, e: React.MouseEvent) => {
     e.preventDefault(); // Prevent navigation to recipe detail
+    e.stopPropagation(); // Stop event from bubbling up to parent elements
     
     // Update state
     let newFavoriteStatus = false;
@@ -160,7 +161,8 @@ export default function Recipes() {
       ...recipe,
       favorite: favorites.includes(recipe.id)
     })));
-  }, [sampleRecipes]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <main className="flex flex-col min-h-screen pb-16 bg-gray-50">
