@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
-import { Plus, ShoppingBag, Trash2, Edit, ChevronRight, ListChecks, Home, Utensils } from 'lucide-react';
+import { Plus, ShoppingBag, ChevronRight, Home, Utensils } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Lists() {

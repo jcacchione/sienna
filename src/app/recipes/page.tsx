@@ -60,19 +60,6 @@ export default function Recipes() {
       localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
     }, 0);
   };
-  // Initialize recipes from sample data and check favorites
-  useEffect(() => {
-    // Get favorite recipes from localStorage
-    const storedFavorites = localStorage.getItem('favoriteRecipes');
-    const favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
-    
-    // Set recipes with favorite status
-    setRecipes(sampleRecipes.map(recipe => ({
-      ...recipe,
-      favorite: favorites.includes(recipe.id)
-    })));
-  }, []);
-  
   // Sample recipes data
   const sampleRecipes = [
     {
@@ -138,7 +125,7 @@ export default function Recipes() {
     {
       id: '6',
       title: 'One-Pot Lentil Soup',
-      description: 'Hearty, nutritious soup that\'s budget-friendly',
+      description: 'Hearty, nutritious soup that&apos;s budget-friendly',
       prepTime: '10 mins',
       cookTime: '30 mins',
       servings: 4,
@@ -161,6 +148,19 @@ export default function Recipes() {
     },
 
   ];
+
+  // Initialize recipes from sample data and check favorites
+  useEffect(() => {
+    // Get favorite recipes from localStorage
+    const storedFavorites = localStorage.getItem('favoriteRecipes');
+    const favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
+    
+    // Set recipes with favorite status
+    setRecipes(sampleRecipes.map(recipe => ({
+      ...recipe,
+      favorite: favorites.includes(recipe.id)
+    })));
+  }, [sampleRecipes]);
 
   return (
     <main className="flex flex-col min-h-screen pb-16 bg-gray-50">

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 interface FeatureCardProps {
   title: string;
@@ -19,8 +19,7 @@ export default function FeatureCard({
   linkHref,
   accentColor = 'bg-primary'
 }: FeatureCardProps) {
-  // Calculate the text color from the background color
-  const textColor = accentColor.replace('bg-', 'text-');
+  // No need to calculate text color as we're using white text
   
   return (
     <Link href={linkHref}>

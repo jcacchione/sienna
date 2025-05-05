@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Header from '@/components/Header';
 // Settings page no longer uses Navbar
 import Toast from '@/components/Toast';
@@ -25,7 +25,7 @@ export default function Settings() {
   };
 
   // Apply settings to document and localStorage
-  const applySettings = {
+  const applySettings = useMemo(() => ({
     theme: (value: string) => {
       document.documentElement.setAttribute('data-theme', value);
       localStorage.setItem('theme', value);
@@ -44,7 +44,7 @@ export default function Settings() {
       localStorage.setItem('soundAlerts', value.toString());
       showToast(`Sound alerts ${value ? 'enabled' : 'disabled'}`);
     }
-  };
+  }), [showToast]);
 
   // Helper function for font settings
   const getFontFamily = (value: string): string => {
@@ -73,7 +73,7 @@ export default function Settings() {
     // Apply settings
     applySettings.theme(storedTheme);
     applySettings.fontFamily(storedFontFamily);
-  }, []);
+  }, [applySettings]);
 
   // Event handlers
   const handleThemeChange = (value: string) => {

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
-import { Calendar, Clock, Bell, CheckCircle, AlertCircle, Edit, Trash2, ArrowLeft, MoreVertical } from 'lucide-react';
+import { Calendar, Clock, Bell, CheckCircle, AlertCircle, Edit, Trash2, MoreVertical } from 'lucide-react';
 import Link from 'next/link';
 
 type Tracker = {
@@ -95,7 +95,7 @@ export default function TrackerDetail() {
         <div className="flex-1 px-4 pt-4 pb-6 flex flex-col items-center justify-center">
           <AlertCircle className="h-16 w-16 text-red-500 mb-4" />
           <h2 className="text-xl font-semibold mb-2">Tracker Not Found</h2>
-          <p className="text-gray-500 mb-6 text-center">The tracker you're looking for doesn't exist or has been removed.</p>
+          <p className="text-gray-500 mb-6 text-center">The tracker you&apos;re looking for doesn&apos;t exist or has been removed.</p>
           <Link href="/trackers" className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg shadow-sm transition-colors">
             Back to Trackers
           </Link>

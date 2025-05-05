@@ -254,7 +254,7 @@ export default function RecipeDetail() {
     '6': {
       id: '6',
       title: 'One-Pot Lentil Soup',
-      description: 'Hearty, nutritious soup that\'s budget-friendly',
+      description: 'Hearty, nutritious soup that&apos;s budget-friendly',
       prepTime: '10 mins',
       cookTime: '30 mins',
       servings: 4,
@@ -367,7 +367,7 @@ export default function RecipeDetail() {
         <div className="flex-1 px-4 pt-4 pb-6 flex flex-col items-center justify-center">
           <ChefHat className="h-16 w-16 text-gray-400 mb-4" />
           <h2 className="text-xl font-semibold mb-2">Recipe Not Found</h2>
-          <p className="text-gray-500 mb-6 text-center">The recipe you're looking for doesn't exist or has been removed.</p>
+          <p className="text-gray-500 mb-6 text-center">The recipe you&apos;re looking for doesn&apos;t exist or has been removed.</p>
           <Link href="/recipes" className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg shadow-sm transition-colors flex items-center gap-2">
             <ArrowLeft size={18} />
             Back to Recipes

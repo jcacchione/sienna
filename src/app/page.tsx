@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroHeader from '@/components/HeroHeader';
 import FeatureCard from '@/components/FeatureCard';
-import { TrendingUp, Receipt, Award, Target } from 'lucide-react';
+import { TrendingUp, Award, Target } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {

@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
-import { Plus, Clock, Bell, Calendar, ChevronRight, AlertCircle } from 'lucide-react';
+import { Plus, Clock, Bell, Calendar, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Trackers() {

@@ -49,7 +49,7 @@ const listsData: Record<string, List> = {
       { id: '109', name: 'Washing Up Liquid', checked: false, category: 'Cleaning', brand: 'Fairy', promotion: { store: 'Dunnes', text: '30% Off' } },
       { id: '110', name: 'Instant Noodles', checked: false, category: 'Quick Meals', brand: 'Pot Noodle', promotion: { store: 'Tesco', text: '4 for €3' } },
       { id: '111', name: 'Coffee', checked: false, category: 'Beverages', brand: 'Dunnes St. Bernard' },
-      { id: '112', name: 'Cereal', checked: false, category: 'Breakfast', brand: 'Kellogg\'s' },
+      { id: '112', name: 'Cereal', checked: false, category: 'Breakfast', brand: 'Kellogg&apos;s' },
       { id: '113', name: 'Crisps Multipack', checked: false, category: 'Snacks', brand: 'Tayto', promotion: { store: 'Dunnes', text: '€3 Only' } },
       { id: '114', name: 'Bin Bags', checked: false, category: 'Household', brand: 'Tesco' }
     ]
@@ -171,7 +171,7 @@ export default function ListDetail() {
         </div>
         
         <div className="flex-1 flex flex-col items-center justify-center">
-          <p className="text-gray-500 mb-4">The list you're looking for doesn't exist.</p>
+          <p className="text-gray-500 mb-4">The list you&apos;re looking for doesn&apos;t exist.</p>
           <Link href="/lists" className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg shadow-sm transition-colors">
             Back to Lists
           </Link>
