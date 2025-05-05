@@ -33,21 +33,21 @@ export default function Home() {
       
       <div className="flex-1 px-4 -mt-6 relative z-30">
         {/* Progress Tracker */}
-        <div className="bg-white rounded-lg shadow-md border border-gray-100 mb-6 overflow-hidden">
-          <div className="p-4 border-b border-gray-100">
+        <div className="bg-base-200 rounded-lg shadow-md border border-base-300 mb-6 overflow-hidden">
+          <div className="bg-gradient-to-r from-orange-500 to-amber-600 p-4 text-white">
             <h2 className="font-medium flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-orange-500" />
+              <TrendingUp className="h-5 w-5" />
               Progress Tracker
             </h2>
           </div>
           
-          <div className="grid grid-cols-2 divide-x divide-gray-100">
-            <Link href="/trackers" className="p-4 flex flex-col items-center hover:bg-gray-50 transition-colors">
+          <div className="grid grid-cols-2 divide-x divide-base-300 bg-base-100">
+            <Link href="/trackers" className="p-4 flex flex-col items-center hover:bg-base-200 transition-colors">
               <div className="bg-orange-100 p-2 rounded-full mb-2">
                 <Target className="h-5 w-5 text-orange-500" />
               </div>
               <span className="text-2xl font-bold">{progressStats.activeGoals}</span>
-              <span className="text-sm text-gray-500">Active Goals</span>
+              <span className="text-sm text-base-content/70">Active Goals</span>
             </Link>
             
             <div className="p-4 flex flex-col items-center">
@@ -55,16 +55,16 @@ export default function Home() {
                 <Award className="h-5 w-5 text-blue-500" />
               </div>
               <span className="text-2xl font-bold">{progressStats.daysIndependent}</span>
-              <span className="text-sm text-gray-500">Days Independent</span>
+              <span className="text-sm text-base-content/70">Days Independent</span>
             </div>
           </div>
           
-          <div className="p-3 bg-gray-50 border-t border-gray-100">
+          <div className="p-3 bg-base-300 border-t border-base-300">
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-500">Daily streak</span>
+              <span className="text-sm text-base-content/70">Daily streak</span>
               <span className="text-sm font-medium">{progressStats.streakDays} days</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
+            <div className="w-full bg-base-content/20 rounded-full h-2 mt-1">
               <div className="bg-orange-500 h-2 rounded-full" style={{ width: `${(progressStats.streakDays / 7) * 100}%` }}></div>
             </div>
           </div>

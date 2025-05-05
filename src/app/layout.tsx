@@ -22,8 +22,12 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: "Sienna - New Grad Companion",
+  title: "Sienna - Your Next Chapter",
   description: "A companion app for new graduates living on their own for the first time",
+  icons: {
+    icon: "/images/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {

@@ -1,6 +1,6 @@
-# Sienna - New Graduate Companion App
+# Sienna - Next Chapter
 
-Sienna is a mobile-friendly web application designed to help new graduates who are living on their own for the first time. Built with [Next.js](https://nextjs.org), [DaisyUI](https://daisyui.com/), and [Lucide Icons](https://lucide.dev/).
+Sienna - Next Chapter is a mobile-friendly web application designed to help new graduates who are living on their own for the first time. Built with [Next.js](https://nextjs.org), [DaisyUI](https://daisyui.com/), and [Lucide Icons](https://lucide.dev/).
 
 ## Getting Started
 

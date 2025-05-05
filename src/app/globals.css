@@ -4,6 +4,39 @@
 
 body {
   font-family: var(--font-inter, ui-sans-serif, system-ui, sans-serif);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+}
+
+/* Ensure all cards and containers follow the theme */
+[data-theme='dark'] .bg-white {
+  background-color: var(--base-200) !important;
+  border-color: var(--base-300) !important;
+  color: var(--base-content) !important;
+}
+
+[data-theme='dark'] .text-gray-700,
+[data-theme='dark'] .text-gray-600,
+[data-theme='dark'] .text-gray-500 {
+  color: var(--base-content) !important;
+}
+
+[data-theme='dark'] .border-gray-100,
+[data-theme='dark'] .border-gray-200 {
+  border-color: var(--base-300) !important;
+}
+
+[data-theme='dark'] .bg-gray-50,
+[data-theme='dark'] .bg-gray-100 {
+  background-color: var(--base-300) !important;
 }
 
 /* Custom styles for the app */

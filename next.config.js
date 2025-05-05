@@ -2,7 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com', 'images.pexels.com', 'plus.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.unsplash.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.pexels.com',
+        pathname: '**',
+      },
+    ],
   },
   // Disable all development indicators including the logo at bottom
   devIndicators: false,

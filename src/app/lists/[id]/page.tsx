@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ArrowLeft, Plus, Check, Trash2, ShoppingBag, Utensils, Home, ListChecks } from 'lucide-react';
+import { Plus, Check, Trash2, ShoppingBag, Utensils, Home, ListChecks } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
 
 // Define the list item type
@@ -162,44 +163,37 @@ export default function ListDetail() {
   // If list not found
   if (!list) {
     return (
-      <main className="flex flex-col min-h-screen p-4">
-        <div className="flex items-center mb-6">
-          <Link href="/lists" className="mr-4">
-            <ArrowLeft className="h-6 w-6 text-gray-600" />
-          </Link>
-          <h1 className="text-xl font-bold">List Not Found</h1>
-        </div>
-        
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <p className="text-gray-500 mb-4">The list you&apos;re looking for doesn&apos;t exist.</p>
+      <main className="flex flex-col min-h-screen pb-16 bg-base-100">
+        <Header title="List Not Found" />
+        <div className="flex-1 px-4 pt-4 pb-6 flex flex-col items-center justify-center">
+          <h2 className="text-xl font-semibold mb-2">List Not Found</h2>
+          <p className="text-base-content/70 mb-6 text-center">The list you&apos;re looking for doesn&apos;t exist or has been removed.</p>
           <Link href="/lists" className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg shadow-sm transition-colors">
             Back to Lists
           </Link>
         </div>
+        <Navbar />
       </main>
     );
   }
   
   return (
-    <main className="flex flex-col min-h-screen pb-16 bg-gray-50">
+    <main className="flex flex-col min-h-screen pb-16 bg-base-100">
       {/* Header */}
-      <div className={`bg-${list.color} text-white p-4`}>
-        <div className="flex items-center mb-2">
-          <Link href="/lists" className="mr-4">
-            <ArrowLeft className="h-6 w-6" />
-          </Link>
-          <h1 className="text-xl font-bold">{list.title}</h1>
-        </div>
-        <p className="text-white/80 text-sm">{list.description}</p>
+      <Header title={list.title} />
+      
+      {/* List description */}
+      <div className={`bg-${list.color}/10 px-4 py-3 border-b border-base-300`}>
+        <p className="text-base-content/80 text-sm">{list.description}</p>
       </div>
       
       {/* Add new item form */}
-      <div className="px-4 py-3 bg-white border-b border-gray-200 sticky top-0 z-10">
+      <div className="px-4 py-3 bg-base-100 border-b border-base-300 sticky top-0 z-10">
         <div className="flex gap-2">
           <input
             type="text"
             placeholder="Add new item..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="flex-1 px-3 py-2 border border-base-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-base-100 text-base-content"
             value={newItemName}
             onChange={(e) => setNewItemName(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && addNewItem()}
@@ -216,7 +210,7 @@ export default function ListDetail() {
       {/* List items */}
       <div className="flex-1 px-4 pt-4 pb-6">
         {items.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-40 text-gray-500">
+          <div className="flex flex-col items-center justify-center h-40 text-base-content/70">
             <p>No items in this list yet.</p>
             <p className="text-sm mt-1">Add your first item above!</p>
           </div>
@@ -225,7 +219,7 @@ export default function ListDetail() {
             {items.map((item) => (
               <div 
                 key={item.id} 
-                className="bg-white rounded-lg border border-gray-200 p-3 flex items-start"
+                className="bg-base-200 rounded-lg border border-base-300 p-3 flex items-start"
               >
                 <button 
                   onClick={() => toggleItemCheck(item.id)}
@@ -254,10 +248,10 @@ export default function ListDetail() {
                   
                   <div className="flex flex-wrap gap-2 mt-1 text-xs">
                     {item.category && (
-                      <span className="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{item.category}</span>
+                      <span className="bg-base-300 text-base-content px-2 py-0.5 rounded-full">{item.category}</span>
                     )}
                     {item.brand && (
-                      <span className="text-gray-500">{item.brand}</span>
+                      <span className="text-base-content/70">{item.brand}</span>
                     )}
                     {item.promotion && (
                       <span className="font-medium text-green-600">{item.promotion.text}</span>

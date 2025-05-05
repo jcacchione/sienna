@@ -31,16 +31,16 @@ export default function Header({ title }: { title: string }) {
 
       {/* Hamburger Menu */}
       {menuOpen && (
-        <div className="absolute right-0 top-full mt-1 mr-4 bg-white rounded-lg shadow-lg overflow-hidden z-50 w-48 animate-fade-in">
+        <div className="absolute right-0 top-full mt-1 mr-4 bg-base-100 rounded-lg shadow-lg overflow-hidden z-50 w-48 animate-fade-in">
           <Link href="/settings">
-            <div className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors">
+            <div className="flex items-center px-4 py-3 text-base-content hover:bg-base-200 transition-colors">
               <Settings size={18} className="mr-3 text-orange-500" />
               <span>Settings</span>
             </div>
           </Link>
-          <div className="border-t border-gray-100"></div>
+          <div className="border-t border-base-300"></div>
           <button className="w-full text-left">
-            <div className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors">
+            <div className="flex items-center px-4 py-3 text-base-content hover:bg-base-200 transition-colors">
               <LogOut size={18} className="mr-3 text-orange-500" />
               <span>Logout</span>
             </div>
