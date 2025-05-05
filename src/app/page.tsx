@@ -1,103 +1,121 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import HeroHeader from '@/components/HeroHeader';
+import FeatureCard from '@/components/FeatureCard';
+import { TrendingUp, Receipt, Award, Target } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
+  const [progressStats, setProgressStats] = useState({
+    daysIndependent: 12,
+    completedGoals: 3,
+    activeGoals: 4,
+    streakDays: 5
+  });
+  
+  // Calculate days since app installation (simulated)
+  useEffect(() => {
+    const startDate = new Date('2025-04-23'); // Simulated start date
+    const today = new Date();
+    const diffTime = Math.abs(today.getTime() - startDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    setProgressStats(prev => ({
+      ...prev,
+      daysIndependent: diffDays
+    }));
+  }, []);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex flex-col min-h-screen pb-16">
+      <HeroHeader />
+      
+      <div className="flex-1 px-4 -mt-6 relative z-30">
+        {/* Progress Tracker */}
+        <div className="bg-white rounded-lg shadow-md border border-gray-100 mb-6 overflow-hidden">
+          <div className="p-4 border-b border-gray-100">
+            <h2 className="font-medium flex items-center gap-2">
+              <TrendingUp className="h-5 w-5 text-orange-500" />
+              Progress Tracker
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-2 divide-x divide-gray-100">
+            <Link href="/trackers" className="p-4 flex flex-col items-center hover:bg-gray-50 transition-colors">
+              <div className="bg-orange-100 p-2 rounded-full mb-2">
+                <Target className="h-5 w-5 text-orange-500" />
+              </div>
+              <span className="text-2xl font-bold">{progressStats.activeGoals}</span>
+              <span className="text-sm text-gray-500">Active Goals</span>
+            </Link>
+            
+            <div className="p-4 flex flex-col items-center">
+              <div className="bg-blue-100 p-2 rounded-full mb-2">
+                <Award className="h-5 w-5 text-blue-500" />
+              </div>
+              <span className="text-2xl font-bold">{progressStats.daysIndependent}</span>
+              <span className="text-sm text-gray-500">Days Independent</span>
+            </div>
+          </div>
+          
+          <div className="p-3 bg-gray-50 border-t border-gray-100">
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-500">Daily streak</span>
+              <span className="text-sm font-medium">{progressStats.streakDays} days</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
+              <div className="bg-orange-500 h-2 rounded-full" style={{ width: `${(progressStats.streakDays / 7) * 100}%` }}></div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        
+        {/* Welcome message */}
+        <div className="bg-base-100 rounded-lg p-5 shadow-md mb-6 border border-base-200">
+          <h2 className="text-lg font-semibold mb-2">Welcome to Your Next Chapter</h2>
+          <p className="text-sm text-base-content/80">
+            This app is designed to help you navigate your new independence with confidence. 
+            Explore the options below to get started on your journey.
+          </p>
+        </div>
+        
+        {/* Feature cards - without header */}
+        <div className="grid grid-cols-1 gap-4 mb-6">
+          <FeatureCard 
+            title="Lists" 
+            description="Build shopping lists with budget-friendly essentials for your new place. Compare prices and find recommended brands."
+            imageSrc="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            linkHref="/lists"
+            accentColor="bg-orange-500"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          
+          <FeatureCard 
+            title="Bills" 
+            description="Track your monthly expenses and never miss a payment. Manage rent, utilities, and other recurring bills in one place."
+            imageSrc="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            linkHref="/bills"
+            accentColor="bg-blue-500"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          
+          <FeatureCard 
+            title="Trackers" 
+            description="Monitor your progress and build good habits with personalized reminders for your daily and weekly tasks."
+            imageSrc="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            linkHref="/trackers"
+            accentColor="bg-amber-600"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          
+          <FeatureCard 
+            title="Recipes" 
+            description="Cook affordable, quick meals with what you have. Simple recipes designed for beginners with minimal equipment."
+            imageSrc="https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            linkHref="/recipes"
+            accentColor="bg-teal-500"
+          />
+        </div>
+      </div>
+      
+      <Navbar />
+    </main>
   );
 }

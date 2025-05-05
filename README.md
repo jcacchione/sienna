@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sienna - New Graduate Companion App
+
+Sienna is a mobile-friendly web application designed to help new graduates who are living on their own for the first time. Built with [Next.js](https://nextjs.org), [DaisyUI](https://daisyui.com/), and [Lucide Icons](https://lucide.dev/).
 
 ## Getting Started
 
@@ -16,18 +18,36 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
+
+- **Customizable Lists**: Create and manage lists with recommended brands and prices
+- **Trackers with Reminders**: Set up trackers for recurring tasks with customizable reminders
+- **Recipe Recommendations**: Browse recipes with step-by-step instructions and video links
+- **Household Items Guide**: Access recommended household items with price estimates
+- **Customizable UI**: Personalize font styles, sizes, and background themes
+
+## Technology Stack
+
+- **Frontend Framework**: Next.js with React and TypeScript
+- **UI Components**: DaisyUI (Tailwind CSS-based component library)
+- **Icons**: Lucide React icons
+- **Styling**: Tailwind CSS
+- **Theme**: Cupcake (default)
+
+## Project Structure
+
+- `src/app/*`: Main application pages
+- `src/components/*`: Reusable UI components
+- `src/models/*`: TypeScript interfaces for data models
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs)
+- [DaisyUI Documentation](https://daisyui.com/docs/install/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Lucide Icons](https://lucide.dev/icons/)
 
 ## Deploy on Vercel
 
