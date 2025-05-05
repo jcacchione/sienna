@@ -180,6 +180,164 @@ export default function RecipeDetail() {
         'You can add a squeeze of lemon juice for extra freshness.',
         'This salad is best served at room temperature rather than cold from the refrigerator.'
       ]
+    },
+    '4': {
+      id: '4',
+      title: 'Quick Homemade Fries',
+      description: 'Crispy on the outside, fluffy on the inside',
+      prepTime: '10 mins',
+      cookTime: '25 mins',
+      servings: 2,
+      difficulty: 'Easy',
+      color: 'yellow-500',
+      image: 'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      category: ['Vegetarian', 'Comfort Food', 'Budget'],
+      ingredients: [
+        '4 medium potatoes (russet or Yukon Gold work best)',
+        '2 tbsp olive oil',
+        '1 tsp garlic powder',
+        '1 tsp paprika',
+        '1/2 tsp salt',
+        '1/4 tsp black pepper',
+        'Fresh herbs like rosemary or thyme (optional)'
+      ],
+      instructions: [
+        'Preheat your oven to 425°F (220°C) and line a baking sheet with parchment paper.',
+        'Wash and scrub the potatoes well. You can peel them if you prefer, but leaving the skin on adds texture and nutrients.',
+        'Cut the potatoes into even sticks, about 1/4 to 1/2 inch thick.',
+        'Place the cut potatoes in a large bowl of cold water and let them soak for 30 minutes (if you have time). This removes excess starch and helps them crisp up.',
+        'Drain the potatoes and pat them completely dry with paper towels.',
+        'In a large bowl, toss the potatoes with olive oil, garlic powder, paprika, salt, and pepper until evenly coated.',
+        'Arrange the potatoes in a single layer on the prepared baking sheet, making sure they don\'t overlap.',
+        'Bake for 20-25 minutes, flipping halfway through, until golden brown and crispy.',
+        'If using fresh herbs, toss them with the hot fries right after removing from the oven.'
+      ],
+      tips: [
+        'For extra crispy fries, soak the cut potatoes in cold water for at least 30 minutes before baking.',
+        'Make sure to dry the potatoes thoroughly after soaking - moisture is the enemy of crispiness!',
+        'Don\'t overcrowd the baking sheet, or the fries will steam instead of getting crispy.'
+      ]
+    },
+    '5': {
+      id: '5',
+      title: 'Avocado Toast',
+      description: 'Simple, nutritious, and infinitely customizable',
+      prepTime: '5 mins',
+      cookTime: '5 mins',
+      servings: 1,
+      difficulty: 'Easy',
+      color: 'green-500',
+      image: 'https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      category: ['Vegetarian', 'Quick', 'Breakfast', 'Healthy'],
+      ingredients: [
+        '2 slices of bread (sourdough or whole grain work well)',
+        '1 ripe avocado',
+        '1/2 lemon, juiced',
+        'Salt and pepper to taste',
+        'Red pepper flakes (optional)',
+        '2 eggs (optional)',
+        'Cherry tomatoes, halved (optional)',
+        'Microgreens or fresh herbs for garnish (optional)'
+      ],
+      instructions: [
+        'Toast the bread slices to your desired level of crispness.',
+        'While the bread is toasting, cut the avocado in half, remove the pit, and scoop the flesh into a bowl.',
+        'Add lemon juice, salt, and pepper to the avocado and mash with a fork to your desired consistency (chunky or smooth).',
+        'Spread the mashed avocado evenly over the toasted bread.',
+        'If using, top with halved cherry tomatoes and sprinkle with red pepper flakes.',
+        'For a protein boost, add a poached or fried egg on top of each slice.',
+        'Garnish with microgreens or fresh herbs if desired.'
+      ],
+      tips: [
+        'Look for avocados that yield slightly to gentle pressure for perfect ripeness.',
+        'The lemon juice not only adds flavor but also helps prevent the avocado from browning.',
+        'Try different toppings like feta cheese, radishes, or a drizzle of balsamic glaze for variety.'
+      ]
+    },
+    '6': {
+      id: '6',
+      title: 'One-Pot Lentil Soup',
+      description: 'Hearty, nutritious, and budget-friendly',
+      prepTime: '10 mins',
+      cookTime: '30 mins',
+      servings: 4,
+      difficulty: 'Easy',
+      color: 'orange-500',
+      image: 'https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      category: ['Vegetarian', 'Budget', 'One Pot', 'Healthy'],
+      ingredients: [
+        '1 cup dried green or brown lentils, rinsed and picked over',
+        '1 onion, diced',
+        '2 carrots, diced',
+        '2 celery stalks, diced',
+        '3 cloves garlic, minced',
+        '1 can (14 oz) diced tomatoes',
+        '4 cups vegetable broth',
+        '1 bay leaf',
+        '1 tsp ground cumin',
+        '1/2 tsp smoked paprika',
+        '1/4 tsp red pepper flakes (optional)',
+        '2 cups fresh spinach or kale, chopped',
+        '2 tbsp olive oil',
+        'Salt and pepper to taste',
+        'Lemon wedges and fresh parsley for serving'
+      ],
+      instructions: [
+        'Heat olive oil in a large pot over medium heat. Add onion, carrots, and celery, and sauté for about 5 minutes until softened.',
+        'Add garlic and cook for another minute until fragrant.',
+        'Stir in cumin, smoked paprika, and red pepper flakes (if using), and cook for 30 seconds to bloom the spices.',
+        'Add lentils, diced tomatoes with their juice, vegetable broth, and bay leaf. Bring to a boil.',
+        'Reduce heat to low, cover, and simmer for about 25-30 minutes, or until lentils are tender.',
+        'Remove bay leaf. For a creamier texture, blend a portion of the soup using an immersion blender (optional).',
+        'Stir in chopped spinach or kale and cook for another 2-3 minutes until wilted.',
+        'Season with salt and pepper to taste.',
+        'Serve hot with a squeeze of lemon juice and a sprinkle of fresh parsley.'
+      ],
+      tips: [
+        'No need to soak lentils beforehand, but do rinse them and check for any small stones.',
+        'This soup thickens as it sits, so add more broth when reheating leftovers if needed.',
+        'For a non-vegetarian version, you can add cooked bacon or sausage, or use chicken broth.'
+      ]
+    },
+    '7': {
+      id: '7',
+      title: 'Sheet Pan Roasted Vegetables',
+      description: 'Simple, colorful, and deliciously caramelized',
+      prepTime: '15 mins',
+      cookTime: '25 mins',
+      servings: 4,
+      difficulty: 'Easy',
+      color: 'purple-500',
+      image: 'https://images.pexels.com/photos/6248997/pexels-photo-6248997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      category: ['Vegetarian', 'Healthy', 'Side Dish'],
+      ingredients: [
+        '1 red bell pepper, cut into chunks',
+        '1 yellow bell pepper, cut into chunks',
+        '1 zucchini, sliced into half-moons',
+        '1 red onion, cut into wedges',
+        '2 cups Brussels sprouts, halved',
+        '1 sweet potato, cubed',
+        '3 tbsp olive oil',
+        '2 cloves garlic, minced',
+        '1 tbsp balsamic vinegar',
+        '1 tsp dried herbs (thyme, rosemary, or Italian seasoning)',
+        'Salt and pepper to taste',
+        'Fresh herbs for garnish (optional)'
+      ],
+      instructions: [
+        'Preheat oven to 425°F (220°C) and line a large baking sheet with parchment paper.',
+        'In a large bowl, combine all the cut vegetables.',
+        'In a small bowl, whisk together olive oil, minced garlic, balsamic vinegar, dried herbs, salt, and pepper.',
+        'Pour the oil mixture over the vegetables and toss until everything is evenly coated.',
+        'Spread the vegetables in a single layer on the prepared baking sheet, making sure not to overcrowd them.',
+        'Roast in the preheated oven for 20-25 minutes, stirring halfway through, until vegetables are tender and caramelized at the edges.',
+        'Garnish with fresh herbs if desired and serve hot or at room temperature.'
+      ],
+      tips: [
+        'Cut vegetables into similar-sized pieces to ensure even cooking.',
+        'Don\'t overcrowd the pan - use two baking sheets if necessary. Overcrowding leads to steaming rather than roasting.',
+        'These roasted vegetables are versatile - serve as a side dish, add to pasta or grain bowls, or use in wraps and salads.'
+      ]
     }
   };
   
