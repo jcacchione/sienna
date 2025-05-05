@@ -147,38 +147,49 @@ export default function RecipeDetail() {
     },
     '3': {
       id: '3',
-      title: 'Simple Greek Salad',
-      description: 'A refreshing Mediterranean salad',
-      prepTime: '15 mins',
-      cookTime: '0 mins',
+      title: 'Simple Chicken Curry',
+      description: 'Tender chicken in a rich, aromatic curry sauce',
+      prepTime: '20 mins',
+      cookTime: '30 mins',
       servings: 4,
-      difficulty: 'Easy',
-      color: 'blue-500',
-      image: 'https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      category: ['Vegetarian', 'Quick', 'No Cook'],
+      difficulty: 'Medium',
+      color: 'yellow-500',
+      image: 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      category: ['Dinner', 'Comfort Food'],
       ingredients: [
-        '1 cucumber, diced',
-        '4 large tomatoes, cut into chunks',
-        '1 red onion, thinly sliced',
-        '1 green bell pepper, diced',
-        '200g feta cheese, cubed',
-        '100g kalamata olives',
-        '2 tbsp extra virgin olive oil',
-        '1 tbsp red wine vinegar',
-        '1 tsp dried oregano',
-        'Salt and black pepper to taste'
+        '1.5 lbs (700g) boneless, skinless chicken thighs, cut into chunks',
+        '2 tbsp vegetable oil',
+        '1 large onion, finely chopped',
+        '3 cloves garlic, minced',
+        '1 tbsp fresh ginger, grated',
+        '2 tbsp curry powder',
+        '1 tsp ground cumin',
+        '1 tsp ground coriander',
+        '1/2 tsp turmeric',
+        '1/4 tsp cayenne pepper (adjust to taste)',
+        '1 can (14 oz) diced tomatoes',
+        '1 can (14 oz) coconut milk',
+        '1 cup chicken broth',
+        'Salt and pepper to taste',
+        'Fresh cilantro for garnish',
+        'Cooked rice for serving'
       ],
       instructions: [
-        'In a large bowl, combine the cucumber, tomatoes, red onion, and green bell pepper.',
-        'Add the feta cheese and olives to the bowl.',
-        'In a small bowl, whisk together the olive oil, red wine vinegar, dried oregano, salt, and pepper to make the dressing.',
-        'Pour the dressing over the salad and gently toss to combine.',
-        'Let the salad sit for about 10 minutes before serving to allow the flavors to meld together.'
+        'Heat oil in a large pot or deep skillet over medium-high heat.',
+        'Season chicken with salt and pepper, then add to the pot and brown on all sides, about 5-6 minutes. Remove chicken and set aside.',
+        'In the same pot, add onions and cook until softened, about 3-4 minutes.',
+        'Add garlic and ginger, cook for another minute until fragrant.',
+        'Stir in all the spices (curry powder, cumin, coriander, turmeric, cayenne) and cook for 30 seconds to bloom the flavors.',
+        'Add diced tomatoes and cook for 2-3 minutes, stirring occasionally.',
+        'Return the chicken to the pot, then add coconut milk and chicken broth. Stir to combine.',
+        'Bring to a simmer, then reduce heat to low and cover. Cook for 20-25 minutes until chicken is tender and sauce has thickened.',
+        'Taste and adjust seasoning as needed.',
+        'Serve hot over rice, garnished with fresh cilantro.'
       ],
       tips: [
-        'For the best flavor, use ripe, in-season tomatoes.',
-        'You can add a squeeze of lemon juice for extra freshness.',
-        'This salad is best served at room temperature rather than cold from the refrigerator.'
+        'For a creamier curry, use full-fat coconut milk.',
+        'Chicken thighs stay more tender than breast meat in curries, but you can substitute if preferred.',
+        'This curry tastes even better the next day after the flavors have had time to develop.'
       ]
     },
     '4': {
@@ -338,7 +349,8 @@ export default function RecipeDetail() {
         'Don\'t overcrowd the pan - use two baking sheets if necessary. Overcrowding leads to steaming rather than roasting.',
         'These roasted vegetables are versatile - serve as a side dish, add to pasta or grain bowls, or use in wraps and salads.'
       ]
-    }
+    },
+
   };
   
   const recipe = recipes[id];
